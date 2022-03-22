@@ -1,0 +1,219 @@
+
+body {
+  background-color: black;
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+}
+
+nav .logo {
+  font-family: "Pacifico", cursive;
+  letter-spacing: 2px;
+}
+
+/* navbar */
+nav {
+  display: flex;
+  background-color: rgb(226, 128, 17);
+  padding: 20px 0;
+  justify-content: space-around;
+  color: black;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  width: 40%;
+  justify-content: space-between;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 0, 8em;
+}
+
+nav ul:hover {
+  color: black;
+}
+
+/* menu humberger */
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  height: 20px;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+}
+
+.menu-toggle input {
+  position: absolute;
+  width: 43px;
+  height: 28px;
+  left: -7px;
+  top: -4px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: black;
+  border-radius: 3px;
+  transition: all 1s;
+}
+
+/* humberger menu animation  */
+.menu-toggle span:nth-child(2) {
+  transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4) {
+  transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+  background-color: black;
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(4) {
+  background-color: black;
+  transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+  opacity: 0;
+  transform: scale(0);
+}
+/* responsiv breakpoint */
+
+/* ukuran tablet */
+@media screen and (max-width: 768px) {
+  nav ul {
+    width: 50%;
+  }
+}
+
+/* ukuran mobile  */
+@media screen and (max-width: 560px) {
+  .menu-toggle {
+    display: flex;
+  }
+  nav ul {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 30vh;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(226, 128, 17);
+    z-index: 1;
+    transform: translatex(100%);
+    transition: all 1s;
+    opacity: 0;
+  }
+
+  nav ul.slide {
+    transform: translatex(0);
+    opacity: 1;
+  }
+}
+
+nav .logo ul, a:hover {
+  background-color: lightseagreen;
+  color: white;
+}
+
+#home p,
+hr {
+  color: white;
+}
+
+section {
+  padding-top: 5rem;
+  text-align: center;
+  color: rgb(250, 248, 248);
+}
+
+#header img {
+  width: 300px;
+  height: 200px;
+  border-radius: 50%;
+  padding-bottom: 10px;
+}
+
+#about img {
+  border-radius: 50%;
+}
+h2,
+th,
+td {
+  color: white;
+}
+
+
+#contact {
+  color: white;
+}
+
+#header table {
+  max-width: 600px;
+  margin: 3em auto;
+}
+
+#header h2 {
+  text-align: center;
+}
+
+#header table {
+  width: 100%;
+  color: white;
+  border-color: rgb(248, 245, 250);
+  background-color: rgb(17, 16, 17);
+}
+
+#galery {
+  background-color: black;
+}
+#galery img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+#galery img, p {
+  padding-bottom: 20px;
+  padding-top: 1opx
+  ;
+
+}
+
+.service table{
+  width: 100%;
+  max-width: 600px;
+  margin: 3em auto;
+  color: white;
+  border-color: rgb(248, 245, 250);
+  background-color: rgb(17, 16, 17);
+}
+
+.footer {
+  background-color: #fc9918;
+  padding: 10px;
+}
+
+.footer .copy {
+  text-align: center;
+  font-size: 18px;
+}
+.footer .copy a {
+  text-decoration: none;
+}
